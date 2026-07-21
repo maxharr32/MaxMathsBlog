@@ -4,7 +4,7 @@ Throw darts at a pizza box of with a dart board stuck inside (which touches all 
 
 {{widget}}
 
-## How this is
+## How this Works
 
 The concept behind this cool trick is that the ratio between the two areas of the pizza box and the dart board are special due to how they were contructed. With a square of sides 2, the area of the square would be 4 units^2 and the area of the circle inscribed inside would be 1^2 x π. Therefore the area of the circle over the area of the square would be π/4 and therefore this multiplied by 4 would give you pi. <br>
 
