@@ -31,7 +31,7 @@ window.POSTS = [
     slug: 'voronoi',
     title: 'Voronoi-diagrams',
     date: '2026-08-01',
-    summary: 'How Voronoi diagrams are used and why they are useful.',
+    summary: 'How Voronoi diagrams are used by city planners to decide where hospitals are placed to minimise death.',
     tags: ['geometry', 'application'],
     widget: 'voronoi'
   },
