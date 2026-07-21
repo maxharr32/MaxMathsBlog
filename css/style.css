@@ -1,0 +1,306 @@
+/* ============================================================
+   Design tokens
+   Concept: a working mathematician's notebook, rendered digitally.
+   Grid paper, ink, a single plotted-line green, sienna for the
+   one interactive/live thing on the page.
+   ============================================================ */
+
+:root {
+  --paper:      #E9EDE4;
+  --paper-raise:#F3F5EF;
+  --ink:        #1B2A22;
+  --ink-soft:   #4A5A4F;
+  --grid-line:  #C7D0BE;
+  --rule:       #B9C2AF;
+  --plot:       #2F6F4E;   /* primary accent — plotted computation */
+  --plot-dim:   #7FA98C;
+  --live:       #B5542E;   /* signature accent — the one "live" thing */
+  --data:       #3B5BDB;   /* used sparingly, numbers/code only */
+
+  --font-display: 'Spectral', Georgia, serif;
+  --font-body:    'Inter', -apple-system, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, Menlo, monospace;
+
+  --grid-size: 40px;
+  --content-w: 700px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(var(--grid-line) 1px, transparent 1px) 0 0 / var(--grid-size) var(--grid-size),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / var(--grid-size) var(--grid-size),
+    var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--plot); text-decoration-color: var(--plot-dim); }
+a:hover { text-decoration-color: var(--plot); }
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--live);
+  outline-offset: 3px;
+}
+
+/* ---------------- Header / ambient signature ---------------- */
+
+.site-header {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: 40px 24px 28px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 27px;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+
+.site-title a { color: var(--ink); text-decoration: none; }
+
+.site-tagline {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-soft);
+  margin: 4px 0 0;
+  letter-spacing: 0.02em;
+}
+
+/* The living cellular-automaton strip — the one signature element.
+   A quiet grid of cells that evolves under Conway's Game of Life
+   rules, forever, in the corner of every page. */
+.life-strip {
+  flex-shrink: 0;
+  border: 1px solid var(--rule);
+  background: var(--paper-raise);
+  image-rendering: pixelated;
+  display: block;
+}
+
+/* ---------------- Layout shells ---------------- */
+
+.page {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: 0 24px 96px;
+}
+
+.entry-list {
+  list-style: none;
+  margin: 48px 0 0;
+  padding: 0;
+}
+
+.entry-list li {
+  border-bottom: 1px dashed var(--rule);
+  padding: 22px 0;
+}
+.entry-list li:first-child { padding-top: 0; }
+
+.entry-date {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--plot);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.entry-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  margin: 0 0 6px;
+}
+.entry-title a { text-decoration: none; color: var(--ink); }
+.entry-title a:hover { color: var(--plot); }
+
+.entry-summary { color: var(--ink-soft); margin: 0; }
+
+.entry-tags {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-soft);
+  margin-top: 8px;
+}
+.entry-tags span::before { content: "#"; color: var(--plot-dim); }
+.entry-tags span { margin-right: 10px; }
+
+/* ---------------- Empty notebook state ---------------- */
+
+.empty-page {
+  margin-top: 64px;
+  padding: 32px 28px;
+  border: 1px solid var(--rule);
+  background: var(--paper-raise);
+  position: relative;
+}
+
+.empty-page::before {
+  content: "";
+  position: absolute;
+  left: 28px; right: 28px; top: 60%;
+  border-top: 1px dashed var(--rule);
+}
+
+.empty-page h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 19px;
+  margin: 0 0 10px;
+}
+
+.empty-page p {
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.empty-page code {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 1px 6px;
+}
+
+/* ---------------- Article ---------------- */
+
+.article-header { margin: 48px 0 8px; }
+
+.article-title {
+  font-family: var(--font-display);
+  font-size: 34px;
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+
+.article-meta {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--plot);
+}
+
+.article-body {
+  margin-top: 32px;
+  font-size: 18px;
+}
+
+.article-body h2 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  margin: 40px 0 14px;
+}
+
+.article-body h3 {
+  font-family: var(--font-display);
+  font-size: 19px;
+  margin: 32px 0 12px;
+}
+
+.article-body p { margin: 0 0 18px; }
+
+.article-body code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background: var(--paper-raise);
+  border: 1px solid var(--rule);
+  padding: 1px 5px;
+}
+
+.article-body pre {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  background: var(--paper-raise);
+  border: 1px solid var(--rule);
+  padding: 16px;
+  overflow-x: auto;
+}
+.article-body pre code { border: none; padding: 0; background: none; }
+
+.article-body blockquote {
+  margin: 0 0 18px;
+  padding-left: 16px;
+  border-left: 2px solid var(--plot-dim);
+  color: var(--ink-soft);
+}
+
+/* margin note style for inline data callouts written by the author */
+.article-body .note,
+.article-body table {
+  font-size: 15px;
+}
+
+.article-body table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 0 18px;
+}
+.article-body th, .article-body td {
+  border: 1px solid var(--rule);
+  padding: 6px 10px;
+  text-align: left;
+}
+.article-body th { font-family: var(--font-mono); font-weight: 500; font-size: 12px; }
+
+/* ---------------- Widget dock ---------------- */
+
+.widget-dock {
+  margin: 28px 0 40px;
+  border: 1px solid var(--rule);
+  background: var(--paper-raise);
+}
+
+.widget-dock-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-soft);
+  padding: 8px 14px;
+  border-bottom: 1px dashed var(--rule);
+  letter-spacing: 0.03em;
+}
+
+.widget-dock-body { padding: 18px; }
+
+/* ---------------- Misc ---------------- */
+
+.back-link {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  display: inline-block;
+  margin-top: 44px;
+}
+
+.site-footer {
+  max-width: var(--content-w);
+  margin: 0 auto;
+  padding: 24px 24px 60px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 560px) {
+  .site-header { flex-direction: column; align-items: flex-start; }
+  .article-title { font-size: 27px; }
+}
