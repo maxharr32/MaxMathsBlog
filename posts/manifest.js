@@ -27,4 +27,12 @@ window.POSTS = [
     tags: ['monte-carlo', 'probability', 'pi'],
     widget: 'pi-estimation'
   },
+  {
+    slug: 'voronoi',
+    title: 'Voronoi-diagrams',
+    date: '2026-08-01',
+    summary: 'How Voronoi diagrams are used and why they are useful.',
+    tags: ['geometry', 'application'],
+    widget: 'voronoi'
+  },
 ];
