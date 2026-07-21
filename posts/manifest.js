@@ -24,7 +24,7 @@ window.POSTS = [
     title: 'Estimating pi by throwing darts',
     date: '2026-08-01',
     summary: 'What happens if you drop ten thousand random points on a square and count how many land in the circle.',
-    tags: ['monte-carlo', 'probability'],
+    tags: ['monte-carlo', 'probability', 'pi'],
     widget: 'pi-estimation'
   },
 ];
