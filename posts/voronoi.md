@@ -1,6 +1,6 @@
 ## The idea
 
-Voronoi diagrams are useful tools in which every point in one 'cell' is closer to the point within that 'cell' than any other point in the diagram. Along with the golden ratio, voronoi diagrams are also very prevalent in nature, being seen in giraffe patterns and dragonfly wings. Voronoi diagrams are also used by architects to create more natural biometric facade patterns. 
+Voronoi diagrams are useful tools in which every point in one 'cell' is closer to the point within that 'cell' than any other point in the diagram. Along with the golden ratio, voronoi diagrams are also very prevalent in nature, being seen in giraffe patterns and dragonfly wings. Voronoi diagrams are also used by architects to create more natural biometric facade patterns. The box below shows 5 points which you can move to see how it changes the diagram. 
 
 {{widget}}
 

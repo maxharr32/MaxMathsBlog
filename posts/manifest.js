@@ -23,13 +23,13 @@ window.POSTS = [
     slug: 'pi-estimation',
     title: 'Estimating pi by throwing darts',
     date: '21-07-2026',
-    summary: 'What happens if you drop ten thousand random points on a square and count how many land in the circle.',
+    summary: 'What happens if you drop ten thousand random points on a square and count how many land in a circle.',
     tags: ['monte-carlo', 'probability', 'pi'],
     widget: 'pi-estimation'
   },
   {
     slug: 'voronoi',
-    title: 'Voronoi-diagrams',
+    title: 'Voronoi-diagrams and City Planners',
     date: '21-07-2026',
     summary: 'How Voronoi diagrams are used by city planners to decide where hospitals are placed to minimise death.',
     tags: ['geometry', 'application'],
@@ -39,7 +39,7 @@ window.POSTS = [
     slug: 'taylor-series',
     title: 'Taylor Series Showcase',
     date: '22-07-2026',
-    summary: '',
+    summary: 'How Physicists use taylor series in calculations for aproximate values for their calculations.',
     tags: ['calculus', 'estimation', 'application'],
     widget: 'taylor-series'
   },
