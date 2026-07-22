@@ -22,7 +22,7 @@ window.POSTS = [
   {
     slug: 'pi-estimation',
     title: 'Estimating pi by throwing darts',
-    date: '2026-08-01',
+    date: '21-07-2026',
     summary: 'What happens if you drop ten thousand random points on a square and count how many land in the circle.',
     tags: ['monte-carlo', 'probability', 'pi'],
     widget: 'pi-estimation'
@@ -30,9 +30,17 @@ window.POSTS = [
   {
     slug: 'voronoi',
     title: 'Voronoi-diagrams',
-    date: '2026-08-01',
+    date: '21-07-2026',
     summary: 'How Voronoi diagrams are used by city planners to decide where hospitals are placed to minimise death.',
     tags: ['geometry', 'application'],
     widget: 'voronoi'
+  },
+  {
+    slug: 'taylor-series',
+    title: 'Taylor Series Showcase',
+    date: '22-07-2026',
+    summary: '',
+    tags: ['calculus', 'estimation', 'application'],
+    widget: 'taylor-series'
   },
 ];
