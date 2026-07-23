@@ -16,7 +16,9 @@ To contruct a Taylor series, you start with a tangent to the curve at the point 
 
 To continue the series, you need to make sure the rate of gradient change at the point of interest on the polynomial is the same as the original function. To do this you plug the x co-ord into the second differential of the original function. For cos, plugging in 0 to -cos gives -1 (-cos being the second differential of cos). However, you need to make sure the differentials of the polynomial are equal to the differential values of the original function. because the differential of the polynomial once differentiated twice is 2k (it started as kx² then differentiated to 2kx then just 2k, where k is a constant). using all this you must see that 2k must equal -1 and therefore k is -1/2 and therefore the third term of the Taylor series for cos is -1/2 x² and so the first three terms are 1 + 0 x + -1/2 x². <br>
 
-f(x) = f(0) + f'(0)x + f''(0)x²/2! + f'''(0)x³/3! + ... <br>
+```python
+f(x) = f(0) + f'(0)x + f''(0)x²/2! + f'''(0)x³/3! + ... 
+```
 
 you can continue this method to attain the Taylor series for cos, but commonly the Taylor series for cos is simplified into a sum to infinity due to the fact it follows a pattern and the complete Taylor Series would go on forever. <br>
 
