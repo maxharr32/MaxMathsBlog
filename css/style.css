@@ -304,3 +304,43 @@ a:focus-visible, button:focus-visible {
   .site-header { flex-direction: column; align-items: flex-start; }
   .article-title { font-size: 27px; }
 }
+
+/* ---------------- Search ---------------- */
+
+.search-bar {
+  margin: 32px 0 0;
+}
+
+.search-input {
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  padding: 10px 14px;
+  border: 1px solid var(--rule);
+  background: var(--paper-raise);
+  color: var(--ink);
+}
+
+.search-input::placeholder { color: var(--ink-soft); }
+
+.search-input:focus-visible {
+  outline: 2px solid var(--live);
+  outline-offset: 2px;
+}
+
+.search-hint {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-soft);
+  margin: 6px 2px 0;
+}
+
+.no-results {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+  margin-top: 40px;
+}
+
+.entry-tags span { cursor: pointer; }
+.entry-tags span:hover { color: var(--plot); }

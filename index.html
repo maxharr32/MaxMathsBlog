@@ -20,6 +20,13 @@
   <canvas class="life-strip" id="life-strip" aria-hidden="true"></canvas>
 </header>
 
+<div class="page">
+  <div class="search-bar">
+    <input type="text" class="search-input" id="search-input" placeholder="search by #tag or title…">
+    <p class="search-hint">try a hashtag, e.g. #monte-carlo, or any word from a title</p>
+  </div>
+</div>
+
 <main class="page">
   <ul class="entry-list" id="entry-list" hidden></ul>
 
@@ -41,14 +48,51 @@
 <script>
   mountLifeStrip(document.getElementById('life-strip'));
 
-  var posts = (window.POSTS || []).slice().sort(function (a, b) {
+  var allPosts = (window.POSTS || []).slice().sort(function (a, b) {
     return a.date < b.date ? 1 : -1;
   });
 
-  if (posts.length > 0) {
-    document.getElementById('empty-state').hidden = true;
-    var list = document.getElementById('entry-list');
+  var list = document.getElementById('entry-list');
+  var emptyState = document.getElementById('empty-state');
+  var searchInput = document.getElementById('search-input');
+
+  function matches(post, query) {
+    if (!query) return true;
+    query = query.toLowerCase().replace(/^#/, '');
+    var inTitle = post.title.toLowerCase().indexOf(query) !== -1;
+    var inTags = (post.tags || []).some(function (t) {
+      return t.toLowerCase().indexOf(query) !== -1;
+    });
+    return inTitle || inTags;
+  }
+
+  function renderList(posts) {
+    list.innerHTML = '';
+
+    if (allPosts.length === 0) {
+      emptyState.hidden = false;
+      list.hidden = true;
+      return;
+    }
+    emptyState.hidden = true;
+
+    if (posts.length === 0) {
+      list.hidden = true;
+      var none = document.getElementById('no-results');
+      if (!none) {
+        none = document.createElement('p');
+        none.id = 'no-results';
+        none.className = 'no-results';
+        list.parentNode.insertBefore(none, list.nextSibling);
+      }
+      none.textContent = 'No entries match "' + searchInput.value + '".';
+      return;
+    }
+
+    var none = document.getElementById('no-results');
+    if (none) none.remove();
     list.hidden = false;
+
     posts.forEach(function (post) {
       var li = document.createElement('li');
 
@@ -77,6 +121,10 @@
         post.tags.forEach(function (t) {
           var span = document.createElement('span');
           span.textContent = t;
+          span.addEventListener('click', function () {
+            searchInput.value = '#' + t;
+            renderList(allPosts.filter(function (p) { return matches(p, '#' + t); }));
+          });
           tags.appendChild(span);
         });
         li.appendChild(tags);
@@ -85,6 +133,12 @@
       list.appendChild(li);
     });
   }
+
+  searchInput.addEventListener('input', function () {
+    renderList(allPosts.filter(function (p) { return matches(p, searchInput.value); }));
+  });
+
+  renderList(allPosts);
 </script>
 </body>
 </html>

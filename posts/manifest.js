@@ -48,7 +48,7 @@ window.POSTS = [
     title: 'The Philosophy and Maths of Zeno\'s Paradox',
     date: '23-07-2026',
     summary: 'Zeno\'s Paradox is a famous thought experiment used to challenge the concept of motion and infinity, does it still hold up 2000 years later?',
-    tags: ['calculus', 'estimation', 'application'],
+    tags: ['series', 'philosophy', 'infinity'],
     widget: 'zeno'
   },
 ];
