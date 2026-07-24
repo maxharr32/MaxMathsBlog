@@ -14,7 +14,7 @@ window.Widgets['mandelbrot-orbit'] = (function () {
   function mount(container) {
     var W = 420, H = 300;
     var RE_MIN = -2.5, RE_MAX = 1, IM_MIN = -1.25, IM_MAX = 1.25;
-    var MAX_ITER = 80;      // for shading the background set
+    var MAX_ITER = 50;      // for shading the background set
     var ORBIT_STEPS = 60;   // for animating a clicked orbit
     var ESCAPE_R = 2;
 
@@ -225,8 +225,23 @@ window.Widgets['mandelbrot-orbit'] = (function () {
       statusEl.className = 'mbo-status';
     });
 
-    buildBackground();
-    drawBackground();
+    // paint a placeholder immediately, then defer the heavy pixel loop
+    // to the next frame so the browser actually gets to paint first —
+    // otherwise the tab looks frozen on the label/controls only.
+    ctx.fillStyle = paper;
+    ctx.fillRect(0, 0, W, H);
+    ctx.strokeStyle = rule;
+    ctx.strokeRect(0.5, 0.5, W - 1, H - 1);
+    ctx.fillStyle = inkSoft;
+    ctx.font = '12px monospace';
+    ctx.fillText('rendering…', W / 2 - 34, H / 2);
+
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () {
+        buildBackground();
+        drawBackground();
+      });
+    });
   }
 
   function unmount(container) {
