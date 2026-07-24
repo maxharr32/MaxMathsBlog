@@ -1,6 +1,6 @@
 window.Widgets = window.Widgets || {};
  
-window.Widgets['mandelbrot-orbit'] = (function () {
+window.Widgets['mandelbrot'] = (function () {
   var timer = null;
   var buildTimer = null;
  
