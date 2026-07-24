@@ -24,7 +24,7 @@ window.POSTS = [
     title: 'Estimating pi by throwing darts',
     date: '21-07-2026',
     summary: 'What happens if you drop ten thousand random points on a square and count how many land in a circle.',
-    tags: ['monte-carlo', 'probability', 'pi'],
+    tags: ['monte-carlo', 'probability', 'pi', 'maths'],
     widget: 'pi-estimation'
   },
   {
@@ -32,7 +32,7 @@ window.POSTS = [
     title: 'Voronoi-diagrams and City Planners',
     date: '21-07-2026',
     summary: 'How Voronoi diagrams are used by city planners to decide where hospitals are placed to minimise death.',
-    tags: ['geometry', 'application'],
+    tags: ['geometry', 'application', 'maths'],
     widget: 'voronoi'
   },
   {
@@ -40,7 +40,7 @@ window.POSTS = [
     title: 'Taylor Series Showcase',
     date: '22-07-2026',
     summary: 'How Physicists use taylor series in calculations for aproximate values for their calculations.',
-    tags: ['calculus', 'estimation', 'application'],
+    tags: ['calculus', 'estimation', 'application', 'maths'],
     widget: 'taylor-series'
   },
   {
@@ -48,7 +48,15 @@ window.POSTS = [
     title: 'The Philosophy and Maths of Zeno\'s Paradox',
     date: '23-07-2026',
     summary: 'Zeno\'s Paradox is a famous thought experiment used to challenge the concept of motion and infinity, does it still hold up 2000 years later?',
-    tags: ['series', 'philosophy', 'infinity'],
+    tags: ['series', 'infinity', 'philosophy', 'maths'],
     widget: 'zeno'
+  },
+  {
+    slug: 'mandelbrot',
+    title: 'How the Mandelbrot Fractal is Constructed',
+    date: '23-07-2026',
+    summary: 'Explaining the maths around the Mandelbrot fractal and how an iterative series is mapped to give the beautiful shapes seen.',
+    tags: ['iteration', 'infinity', 'fractal', 'maths'],
+    widget: 'mandelbrot'
   },
 ];
