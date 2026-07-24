@@ -54,7 +54,7 @@ window.POSTS = [
   {
     slug: 'mandelbrot',
     title: 'How the Mandelbrot Fractal is Constructed',
-    date: '23-07-2026',
+    date: '24-07-2026',
     summary: 'Explaining the maths around the Mandelbrot fractal and how an iterative series is mapped to give the beautiful shapes seen.',
     tags: ['iteration', 'infinity', 'fractal', 'maths'],
     widget: 'mandelbrot'
