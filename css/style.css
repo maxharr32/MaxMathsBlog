@@ -342,5 +342,13 @@ a:focus-visible, button:focus-visible {
   margin-top: 40px;
 }
 
+.article-body img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 24px 0;
+  border: 1px solid var(--rule);
+}
+
 .entry-tags span { cursor: pointer; }
 .entry-tags span:hover { color: var(--plot); }

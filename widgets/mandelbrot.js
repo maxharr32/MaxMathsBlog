@@ -7,7 +7,7 @@ window.Widgets['mandelbrot'] = (function () {
   function mount(container) {
     var W = 420, H = 300;
     var RE_MIN = -2.5, RE_MAX = 1, IM_MIN = -1.25, IM_MAX = 1.25;
-    var MAX_ITER = 50;
+    var MAX_ITER = 80;
     var ORBIT_STEPS = 60;
     var ESCAPE_R = 2;
     var ROWS_PER_CHUNK = 15;
@@ -61,7 +61,29 @@ window.Widgets['mandelbrot'] = (function () {
         return ('0' + Math.round(parseFloat(x)).toString(16)).slice(-2);
       }).join('');
     }
- 
+    
+        // multi-stop gradient: paper (slow escape, near the boundary) through
+    // the site's plot/data/live accents to near-black (very fast escape)
+    var gradientStops = [
+      paperRgb,
+      hexToRgb(cssColorToHex(plot)),
+      hexToRgb(cssColorToHex(live)),
+      { r: 20, g: 20, b: 20 }
+    ];
+
+    function gradientColor(t) {
+      var n = gradientStops.length - 1;
+      var scaled = t * n;
+      var i = Math.min(n - 1, Math.floor(scaled));
+      var frac = scaled - i;
+      var a = gradientStops[i], b = gradientStops[i + 1];
+      return {
+        r: a.r + (b.r - a.r) * frac,
+        g: a.g + (b.g - a.g) * frac,
+        b: a.b + (b.b - a.b) * frac
+      };
+    }
+
     function showError(err) {
       console.error('mandelbrot-orbit widget error:', err);
       ctx.fillStyle = paper;
@@ -128,11 +150,14 @@ window.Widgets['mandelbrot'] = (function () {
                   data[idx] = plotRgb.r; data[idx + 1] = plotRgb.g; data[idx + 2] = plotRgb.b;
                   data[idx + 3] = 220;
                 } else {
-                  var t = iter / MAX_ITER;
-                  var shade = 1 - t * 0.7;
-                  data[idx] = paperRgb.r * shade + 40 * (1 - shade);
-                  data[idx + 1] = paperRgb.g * shade + 40 * (1 - shade);
-                  data[idx + 2] = paperRgb.b * shade + 40 * (1 - shade);
+
+                  var logZn = Math.log(zr * zr + zi * zi) / 2;
+                  var nu = Math.log(logZn / Math.log(2)) / Math.log(2);
+                  var smoothIter = iter + 1 - nu;
+                  var t = Math.max(0, Math.min(1, smoothIter / MAX_ITER));
+
+                  var col = gradientColor(t);
+                  data[idx] = col.r; data[idx + 1] = col.g; data[idx + 2] = col.b;
                   data[idx + 3] = 255;
                 }
               }
@@ -149,6 +174,8 @@ window.Widgets['mandelbrot'] = (function () {
             showError(err);
           }
         }
+
+        
  
         processChunk();
       }
