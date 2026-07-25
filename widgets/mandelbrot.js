@@ -86,20 +86,20 @@ window.Widgets['mandelbrot'] = (function () {
       hexToRgb(cssColorToHex(plot)),
       hexToRgb(cssColorToHex(live)),
       { r: 20, g: 20, b: 20 }
-    ];
+      ];
 
-    function gradientColor(t) {
-      var n = gradientStops.length - 1;
-      var scaled = t * n;
-      var i = Math.min(n - 1, Math.floor(scaled));
-      var frac = scaled - i;
-      var a = gradientStops[i], b = gradientStops[i + 1];
-      return {
-        r: a.r + (b.r - a.r) * frac,
-        g: a.g + (b.g - a.g) * frac,
-        b: a.b + (b.b - a.b) * frac
-      };
-    }
+      function gradientColor(t) {
+        var n = gradientStops.length - 1;
+        var scaled = t * n;
+        var i = Math.min(n - 1, Math.floor(scaled));
+        var frac = scaled - i;
+        var a = gradientStops[i], b = gradientStops[i + 1];
+        return {
+          r: a.r + (b.r - a.r) * frac,
+          g: a.g + (b.g - a.g) * frac,
+          b: a.b + (b.b - a.b) * frac
+        };
+      }
  
       function toComplex(px, py) {
         return {
