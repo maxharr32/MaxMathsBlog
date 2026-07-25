@@ -7,7 +7,7 @@ window.Widgets['mandelbrot'] = (function () {
   function mount(container) {
     var W = 420, H = 300;
     var RE_MIN = -2.5, RE_MAX = 1, IM_MIN = -1.25, IM_MAX = 1.25;
-    var MAX_ITER = 80;
+    var MAX_ITER = 50;
     var ORBIT_STEPS = 60;
     var ESCAPE_R = 2;
     var ROWS_PER_CHUNK = 15;
@@ -64,7 +64,24 @@ window.Widgets['mandelbrot'] = (function () {
     
         // multi-stop gradient: paper (slow escape, near the boundary) through
     // the site's plot/data/live accents to near-black (very fast escape)
-    var gradientStops = [
+
+    function showError(err) {
+      console.error('mandelbrot-orbit widget error:', err);
+      ctx.fillStyle = paper;
+      ctx.fillRect(0, 0, W, H);
+      ctx.strokeStyle = rule;
+      ctx.strokeRect(0.5, 0.5, W - 1, H - 1);
+      ctx.fillStyle = live;
+      ctx.font = '12px monospace';
+      ctx.fillText('Widget error — check the browser console', 10, H / 2);
+    }
+ 
+    try {
+      var plotRgb = hexToRgb(cssColorToHex(plot));
+      var liveRgb = hexToRgb(cssColorToHex(live));
+      var paperRgb = hexToRgb(cssColorToHex(paper));
+
+      var gradientStops = [
       paperRgb,
       hexToRgb(cssColorToHex(plot)),
       hexToRgb(cssColorToHex(live)),
@@ -83,22 +100,6 @@ window.Widgets['mandelbrot'] = (function () {
         b: a.b + (b.b - a.b) * frac
       };
     }
-
-    function showError(err) {
-      console.error('mandelbrot-orbit widget error:', err);
-      ctx.fillStyle = paper;
-      ctx.fillRect(0, 0, W, H);
-      ctx.strokeStyle = rule;
-      ctx.strokeRect(0.5, 0.5, W - 1, H - 1);
-      ctx.fillStyle = live;
-      ctx.font = '12px monospace';
-      ctx.fillText('Widget error — check the browser console', 10, H / 2);
-    }
- 
-    try {
-      var plotRgb = hexToRgb(cssColorToHex(plot));
-      var liveRgb = hexToRgb(cssColorToHex(live));
-      var paperRgb = hexToRgb(cssColorToHex(paper));
  
       function toComplex(px, py) {
         return {
