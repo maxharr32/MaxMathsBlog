@@ -56,6 +56,11 @@ window.Widgets['game-of-life'] = (function () {
 
     function idx(x, y) { return y * COLS + x; }
 
+    var SPEED_MIN = 80, SPEED_MAX = 1500;
+    function getDelay() {
+      return SPEED_MIN + SPEED_MAX - parseInt(speedSlider.value, 10);
+    }
+
     function seedGlider() {
       grid = new Uint8Array(COLS * ROWS);
       var pts = [[1, 0], [2, 1], [0, 2], [1, 2], [2, 2]];
@@ -123,7 +128,7 @@ window.Widgets['game-of-life'] = (function () {
     function startPlaying() {
       running = true;
       playBtn.textContent = 'Pause';
-      timer = setInterval(step, parseInt(speedSlider.value, 10));
+      timer = setInterval(step, getDelay());
     }
 
     function stopPlaying() {
@@ -160,7 +165,7 @@ window.Widgets['game-of-life'] = (function () {
     speedSlider.addEventListener('input', function () {
       if (running) {
         clearInterval(timer);
-        timer = setInterval(step, parseInt(speedSlider.value, 10));
+        timer = setInterval(step, getDelay());
       }
     });
 
