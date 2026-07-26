@@ -59,4 +59,12 @@ window.POSTS = [
     tags: ['iteration', 'infinity', 'fractal', 'maths'],
     widget: 'mandelbrot'
   },
+  {
+    slug: 'determinism',
+    title: 'Are We Free or is the Future Already Decided? - Determinism',
+    date: '26-07-2026',
+    summary: 'Is every future action decided by the experiences and actions that you have already had? Or are we really free to choose our next choice?',
+    tags: ['determinism', 'future', 'philosophy'],
+    widget: 'game-of-life'
+  },
 ];
