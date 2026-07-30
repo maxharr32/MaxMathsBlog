@@ -73,6 +73,6 @@ window.POSTS = [
     date: '30-07-2026',
     summary: 'Descartes was a French philosopher who is famous for his statement "I think therefore I am". Do you know the true meaning of this statement?',
     tags: ['descartes', 'truth', 'philosophy'],
-    widget: ''
+    widget: 'descartes'
   },
 ];
