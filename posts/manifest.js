@@ -69,7 +69,7 @@ window.POSTS = [
   },
   {
     slug: 'descartes',
-    title: 'I think therefore I am - Descartes',
+    title: 'I Think Therefore I Am - Descartes',
     date: '30-07-2026',
     summary: 'Descartes was a French philosopher who is famous for his statement "I think therefore I am". Do you know the true meaning of this statement?',
     tags: ['descartes', 'truth', 'philosophy'],
