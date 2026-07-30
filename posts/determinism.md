@@ -4,7 +4,7 @@ If you were to know the location, state and energy of every atom in the world, k
 
 ## A Widget against Free Will
 
-Below I have inserted a small game of 'Conway's game of life', created by John Conway uses a 2D grid with select rules to create 'life'. In short - if a cell is surrounded by 3 live cells it becomes alive and if a cell is alive and surrounded by 2 or 3 other cells it continues living. While using very basic rules to govern this game, the outcomes still vary wildly when 2 similar starting states are simulated. The point I am trying to convey is that maybe we don't have free will, real life is far more complex than conways game and therefore, if it is hard to predict  conways game it will be infinitely harder to predict real life, but perhaps possible. Maybe you are governed by the present and can't truly decide your future. 
+Below I have inserted a small game of 'Conway's game of life', created by John Conway uses a 2D grid with select rules to create 'life'. This is also present in the banner of the website, always running. In short - if a cell is surrounded by 3 live cells it becomes alive and if a cell is alive and surrounded by 2 or 3 other cells it continues living. While using very basic rules to govern this game, the outcomes still vary wildly when 2 similar starting states are simulated. The point I am trying to convey is that maybe we don't have free will, real life is far more complex than conways game and therefore, if it is hard to predict  conways game it will be infinitely harder to predict real life, but perhaps possible. Maybe you are governed by the present and can't truly decide your future. 
 
 {{widget}}
 
