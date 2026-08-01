@@ -23,7 +23,7 @@
  */
 window.Widgets = window.Widgets || {};
 
-window.Widgets['timeline'] = (function () {
+window.Widgets['timelinepresoc'] = (function () {
   var EVENTS = [
     {
       year: -300,
