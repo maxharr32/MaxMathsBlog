@@ -1,0 +1,8 @@
+- Black Scholes model
+- Maths poster boy equation - diagram of the imaginary plane 
+- Brownian Motion - possible showcase of bacteria moving
+- Russel and his mathematical pillars
+- G.H Hardy and A mathematicians apology
+- Interesting ideas of Philosophy from before the Greeks - timeline widget
+- 
+-
