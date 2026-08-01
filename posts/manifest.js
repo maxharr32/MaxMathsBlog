@@ -77,9 +77,9 @@ window.POSTS = [
   {
     slug: 'presocratics',
     title: 'The Presocratics and the Birth of Philosophy',
-    date: '30-07-2026',
+    date: '1-08-2026',
     summary: 'Exploring the ideas of the early Greek philosophers who laid the groundwork for Western thought, the names before Socrates, Plato and Aristotle.',
-    tags: ['presocratics', 'philosophy', 'history'],
+    tags: ['presocratics', 'history', 'philosophy'],
     widget: 'timelinepresoc'
   },
 ];

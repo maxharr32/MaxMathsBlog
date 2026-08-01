@@ -64,6 +64,7 @@ window.Widgets['timeline'] = (function () {
   ];
 
   function mount(container) {
+   try {
     var styles = getComputedStyle(document.documentElement);
     var ink = (styles.getPropertyValue('--ink') || '#1B2A22').trim();
     var inkSoft = (styles.getPropertyValue('--ink-soft') || '#4A5A4F').trim();
@@ -132,6 +133,10 @@ window.Widgets['timeline'] = (function () {
         openEvent(ev);
       });
     });
+   } catch (err) {
+     console.error('timeline widget error:', err);
+     container.innerHTML = '<p style="font-family:monospace;font-size:12px;color:var(--live);">Widget error — check the browser console for details.</p>';
+   }
   }
 
   function unmount(container) {
