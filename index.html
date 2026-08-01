@@ -45,9 +45,15 @@
 <script>
   mountLifeStrip(document.getElementById('life-strip'));
 
-  var allPosts = (window.POSTS || []).slice().sort(function (a, b) {
-    return a.date < b.date ? 1 : -1;
-  });
+function parseDate(d) {
+  // expects DD-MM-YYYY
+  var parts = d.split('-');
+  return parseInt(parts[2], 10) * 10000 + parseInt(parts[1], 10) * 100 + parseInt(parts[0], 10);
+}
+
+var allPosts = (window.POSTS || []).slice().sort(function (a, b) {
+  return parseDate(b.date) - parseDate(a.date);
+});
 
   var list = document.getElementById('entry-list');
   var emptyState = document.getElementById('empty-state');
