@@ -53,24 +53,24 @@ window.Widgets['timelinepresoc'] = (function () {
       year: -540,
       label: '540 BCE',
       title: "Heraclitus",
-      summary: 'Proving some infinities are strictly bigger than others.',
-      detail: "Georg Cantor showed that the real numbers cannot be counted off 1, 2, 3, ... the way the whole numbers can — there are, in a precise mathematical sense, more real numbers than whole numbers. Deeply controversial at the time; foundational to mathematics now.\n\nReplace this with your own research and sources.",
+      summary: 'Known as "the obscure"',
+      detail: "Heraclitus is very obscured, not helped by the little remanants of his writings we still have. His grammer was poor and we are not even sure of the order of the fragments we have, only knowing his beleifs through the work of other later philosophers.\n\n His main work is described by Plato as follows. Heraclitus believed that all things pass and flow, and nothing is permanent. He said that everything is in flux, and that everything flows like a river. One of his disciples (Cratylus) was famous for being asked a question and only answering by wiggling his finger, saying that at the point he was ready to answer the world had changed and moved on. Heraclitus also was emphatuated by opposites, saying there is balance in opposites. Some of his examples were that of a need of youth to have age, sleep to have waking and life to have death. Heraclitus also had an idea for the universe\'s arche, beleiving it to be fire, saying some of the world is kindling and some burning out.",
       image: 'images/Heraclitus.png'
     },
     {
       year: -515,
       label: '515 BCE',
       title: "Parmenides",
-      summary: 'Some true statements can never be proven, no matter the rulebook.',
-      detail: "Gödel proved that any sufficiently powerful, consistent mathematical system contains true statements that system can never prove. It ended a decades-long hope (Hilbert's program) of putting all of mathematics on one complete, self-verifying foundation.\n\nReplace this with your own research and sources.",
+      summary: 'Once a follower of the Pythagorean cult',
+      detail: "Parmenides wrote his work in a poem of homeric style. His ",
       image: 'images/Parmenides.png'
     },
     {
       year: -490,
       label: '490 BCE',
       title: "Zeno of Elea",
-      summary: 'Some true statements can never be proven, no matter the rulebook.',
-      detail: "Gödel proved that any sufficiently powerful, consistent mathematical system contains true statements that system can never prove. It ended a decades-long hope (Hilbert's program) of putting all of mathematics on one complete, self-verifying foundation.\n\nReplace this with your own research and sources.",
+      summary: '',
+      detail: "",
       image: 'images/Zeno.png'
     }
   ];
@@ -92,7 +92,7 @@ window.Widgets['timelinepresoc'] = (function () {
     container.innerHTML =
       '<div class="tl-widget">' +
         '<div class="tl-track-wrap">' +
-          '<div class="tl-track">' +
+          '<div class="tl-track" style="min-width:' + Math.max(560, events.length * 110) + 'px">' +
             '<div class="tl-line"></div>' +
             events.map(function (ev, i) {
               var pct = ((ev.year - minYear) / span) * 100;
@@ -160,8 +160,8 @@ window.Widgets['timelinepresoc'] = (function () {
     var style = document.createElement('style');
     style.id = 'tl-widget-styles';
     style.textContent =
-      '.tl-track-wrap{overflow-x:auto;padding-bottom:6px;}' +
-      '.tl-track{position:relative;min-width:560px;height:86px;margin:20px 10px 0;}' +
+      '.tl-track-wrap{overflow-x:auto;padding:26px 44px 10px;}' +
+      '.tl-track{position:relative;height:86px;margin:0;}' +
       '.tl-line{position:absolute;left:0;right:0;top:38px;height:2px;background:var(--rule);}' +
       '.tl-dot{position:absolute;top:26px;transform:translateX(-50%);background:none;border:none;cursor:pointer;padding:0;display:flex;flex-direction:column;align-items:center;font-family:var(--font-mono);}' +
       '.tl-dot-mark{width:14px;height:14px;border-radius:50%;background:var(--paper-raise);border:2px solid var(--plot);display:block;transition:background 0.15s,border-color 0.15s;}' +
