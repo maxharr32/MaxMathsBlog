@@ -26,26 +26,28 @@ window.Widgets = window.Widgets || {};
 window.Widgets['timelinepresoc'] = (function () {
   var EVENTS = [
     {
-      year: -300,
-      label: 'c. 300 BCE',
-      title: 'Euclid — Elements',
-      summary: 'Thirteen books that defined geometry for the next two thousand years.',
-      detail: 'Euclid compiled and systematised the geometric knowledge of his time into the Elements, building everything up from a small set of axioms and postulates. The style — start from a few self-evident truths, derive everything else by strict logical proof — became the template for mathematics itself, not just geometry.\n\nReplace this with your own research and sources.'
-      // image: 'images/euclid.jpg'
+      year: -600,
+      label: 'c. 600 BCE',
+      title: 'The Father - Thales',
+      summary: 'The original Greek philosopher, the first to question the universe',
+      detail: 'Thales was the first known philosopher to pose questions about the world around him. His questions stood out as more philosophical than mythological or religious. He is thought to have predicted a solar eclipse. Thales also, after being called smart but poor, used his knowledge of whether to predict a good olive harvest and rent all the olive presses in Miletus, after the harvest he rented the presses back at a premium.\n\n Thale\'s biggest contribution is a a questioning to the foundation of nature, desiring a more compelling account than that of the Greek gods. His conclusion was that of different arches or first principles that of which all things are composed. Thales believed this arche to be water, because of its abundance and prevelance in the natural world. The way water was choes was the best part, relying on observation and reason rather than mythology.',
+      image: 'images/Thales.png'
     },
     {
-      year: 1637,
-      label: '1637',
-      title: 'Descartes — coordinate geometry',
-      summary: 'Fusing algebra and geometry with a single grid of numbers.',
-      detail: 'In an appendix to his Discourse on Method, Descartes showed that geometric curves could be described by algebraic equations, using a pair of perpendicular axes to locate every point with two numbers. That grid is the (x, y) plane every graph on this site is drawn on.\n\nReplace this with your own research and sources.'
+      year: -580,
+      label: 'c. 550 BCE',
+      title: 'Anaximander - Thales\' Student',
+      summary: 'Had his own idea for the universe\'s arche',
+      detail: 'Anaximinder had a different idea of the universe\'s arche, calling it the "Apeiron" or the unbounded. He is beleived as to have the first recorded words of philosophy with lines from his book being quoted by later philosphers. He is also credited with creating the first map of the world and the first sundial (although it did not track the time, only the seasons).\n\n Anaximander looks to have been a very inteligent astronomer, having ideas of the sun being a ball of fire and being bigger than the earth. He thought the moon was reflecting the sun\'s light and that the earth was a cylinder floating in space, with the flat top being the land and the bottom being water. ',
+      image: 'images/Anaximander.png'
     },
     {
-      year: 1687,
-      label: '1687',
-      title: 'Newton — Principia Mathematica',
-      summary: 'Calculus and the laws of motion, in one volume.',
-      detail: 'Newton laid out the mathematics of motion and gravitation, developing calculus (independently of Leibniz, in a long and bitter priority dispute) as the tool needed to describe continuously changing quantities — exactly what the Taylor series widget on this site is built from.\n\nReplace this with your own research and sources.'
+      year: -530,
+      label: 'c. 530 BCE',
+      title: 'Pythagoras — The cult leader',
+      summary: 'The famous leader of the Pythagorean cult.',
+      detail: 'Pythagoras was a mainly private man, only known through the writings of his followers. Some of his more philosophical beliefs were that the soul is immortal and that reincarnation is real. Therefore, Pythagoras and his following were strict vegetarians, believing that eating meat would be eating the soul of another.\n\n Pythagoras is obviously most well known for his contributions to mathematics, said by some followers to be the first person to take arithmetic beyond normal commerce practices. Pythagoras made oaths to the triangular numbers, in particular having fondness for the number 10, in which he made a triangle of dots, with 4 of the bottom then 3, 2 and 1 to have 10 dots. The Pythagorean theorem however, was never truly credited to Pythagoras, being seen practiced by the Babylonians many years before. it is possible however that one of the Pythagorean followers discovered a proof.\n\n The Pythagorean cult is credited with much discovery over many different fields. They are thought to have understood how the length of string dictates the pitch it made when plucked, and they thought that planets followed this balance with different planets having different pitches. Pythagoras also hated the discovery of irrational numbers so much that upon discovery that the diagonal of a 1x1 square was irrational, he drowned the person who discovered it. Finally, the Pythagorean cult is thought to have considered earth to be spherical and the solar system to be heliocentric.',
+      image: 'images/PythagoreanCult.png'
     },
     {
       year: 1874,

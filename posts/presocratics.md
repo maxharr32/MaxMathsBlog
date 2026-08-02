@@ -1,20 +1,9 @@
-## The idea
+## The Presocratics
 
-One or two paragraphs introducing the maths concept in plain language.
-What's the question you're actually answering?
+the Presocratics were acredited with being the fathers of Philosophy, The first people to ask why. 
 
 {{widget}}
 
-## What it shows
+## Why this is crazy
 
-Walk through the result. What did the simulation/visualisation reveal?
-Include a concrete number or observation, not just "it worked."
-
-## Under the hood
-
-Briefly explain the algorithm or the maths. A short code snippet is
-fine here:
-
-```python
-# example
-```
+In many areas, new ideas are built on the foundation of giants. New discoveries come from small pushes from already developed fields and most fields already know what kind of questions to ask. The first philosophers had nothing, they didn't know what questions to ask, they had no previous thoughts to consider and no progress to build off of. 
