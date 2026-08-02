@@ -3,6 +3,5 @@
 - Brownian Motion - possible showcase of bacteria moving
 - Russel and his mathematical pillars
 - G.H Hardy and A mathematicians apology
-- Interesting ideas of Philosophy from before the Greeks - timeline widget
-- 
+- Socrates, Plato and Aristotle summaries
 -
