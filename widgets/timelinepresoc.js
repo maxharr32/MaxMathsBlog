@@ -62,15 +62,15 @@ window.Widgets['timelinepresoc'] = (function () {
       label: '515 BCE',
       title: "Parmenides",
       summary: 'Once a follower of the Pythagorean cult',
-      detail: "Parmenides wrote his work in a poem of homeric style. His ",
+      detail: "Parmenides was born in Elea to a wealthy family and was cosy with high class society. Parmenides was a pupil of a philosopher called Xenophanes but disagreed with much of his teachings and also was at one point a member of the Pythagorean cult. It is also said that Socrates met him when Socrates was a young boy.\n\n Parmenides wrote his work in a poem of Homeric style, similar to that of the Odyssey. His main work is split into 2 parts in which a young man is taken to a goddess who tells him the 'truth'. This truth was 'What is', being a whole, unmoving and continuous, the goddess added that 'it was not once, it will not be, for it is now'.\n\n This raises a further question of whether what is is physical or figurative (like a god or a concept of infinity). Aristotle said that Parmenides\' 'What is' is the universe as a whole. It also questions whether Parmenides believed in time, perhaps why he included the line of 'nor was it once'. There is another questions of whether change and movement exist to Parmenides as what is is unmoving. This could be encompassed by 'what is not', however, Parmenides said that nothing is not, as to say it is 'not', is for it to be something.\n\n While not being as cryptic a writer as Heraclitus, the concepts he wrote about were certainly of no clear nature. However his direct students and followers were clearly entranced, with the next philosopher on the timeline, Zeno, spending his time defending Parmenides and his 'What is'.",
       image: 'images/Parmenides.png'
     },
     {
       year: -490,
       label: '490 BCE',
       title: "Zeno of Elea",
-      summary: '',
-      detail: "",
+      summary: 'Half and then half again, and again, and again ... ',
+      detail: "All of Zeno\'s writing and concepts were told by other philosophers, namely Diogenes and Plato, being the only source of information about his life. Zeno met Socrates with Parmenides when Socrates was only young, as Zeno was a follower/student/adopted son/lover of Parmenides.\n\n Zeno is thought to have invented dialect, a form of deconstructing arguments in debate, rather than eristic where you merely argue with the opposition. Perhaps what Zeno was most known for was his paradox, his most famous of which was in defence of the ideas Parmenides. Already discussed in a previous article, Zeno's paradox explains a frog that tries to cross a pond. To cross it must first cross half, then half of the remaining distance, then half again and so on. Zeno said he will never fully complete his journey and therefore will never actually move and so movement is impossible. This defends Parmenides and his 'What is' being unmoving and unchanged. The counters to this argument have already been discussed in sufficient detail in the article dedicated to it. ",
       image: 'images/Zeno.png'
     }
   ];
