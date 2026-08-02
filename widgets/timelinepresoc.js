@@ -50,14 +50,14 @@ window.Widgets['timelinepresoc'] = (function () {
       image: 'images/PythagoreanCult.png'
     },
     {
-      year: 1874,
+      year: -400,
       label: '1874',
       title: "Cantor — different sizes of infinity",
       summary: 'Proving some infinities are strictly bigger than others.',
       detail: "Georg Cantor showed that the real numbers cannot be counted off 1, 2, 3, ... the way the whole numbers can — there are, in a precise mathematical sense, more real numbers than whole numbers. Deeply controversial at the time; foundational to mathematics now.\n\nReplace this with your own research and sources."
     },
     {
-      year: 1931,
+      year: -410,
       label: '1931',
       title: "Gödel — incompleteness theorems",
       summary: 'Some true statements can never be proven, no matter the rulebook.',
