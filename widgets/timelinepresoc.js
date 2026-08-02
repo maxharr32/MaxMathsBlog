@@ -26,42 +26,52 @@ window.Widgets = window.Widgets || {};
 window.Widgets['timelinepresoc'] = (function () {
   var EVENTS = [
     {
-      year: -600,
-      label: 'c. 600 BCE',
-      title: 'The Father - Thales',
+      year: -624,
+      label: '624 BCE',
+      title: 'Thales',
       summary: 'The original Greek philosopher, the first to question the universe',
-      detail: 'Thales was the first known philosopher to pose questions about the world around him. His questions stood out as more philosophical than mythological or religious. He is thought to have predicted a solar eclipse. Thales also, after being called smart but poor, used his knowledge of whether to predict a good olive harvest and rent all the olive presses in Miletus, after the harvest he rented the presses back at a premium.\n\n Thale\'s biggest contribution is a a questioning to the foundation of nature, desiring a more compelling account than that of the Greek gods. His conclusion was that of different arches or first principles that of which all things are composed. Thales believed this arche to be water, because of its abundance and prevelance in the natural world. The way water was choes was the best part, relying on observation and reason rather than mythology.',
+      detail: 'Thales was the first known philosopher to pose questions about the world around him. His questions stood out as more philosophical than mythological or religious. He is thought to have predicted a solar eclipse. Thales also, after being called smart but poor, used his knowledge of whether to predict a good olive harvest and rent all the olive presses in Miletus, after the harvest he rented the presses back at a premium.\n\n Thale\'s biggest contribution is a a questioning to the foundation of nature, desiring a more compelling account than that of the Greek gods. His conclusion was that of different arches or first principles that of which all things are composed. Thales believed the universe\'s arche to be water, because of its abundance and prevelance in the natural world. The way water was choes was the best part, relying on observation and reason rather than mythology.',
       image: 'images/Thales.png'
     },
     {
-      year: -580,
-      label: 'c. 550 BCE',
-      title: 'Anaximander - Thales\' Student',
+      year: -610,
+      label: '610 BCE',
+      title: 'Anaximander',
       summary: 'Had his own idea for the universe\'s arche',
       detail: 'Anaximinder had a different idea of the universe\'s arche, calling it the "Apeiron" or the unbounded. He is beleived as to have the first recorded words of philosophy with lines from his book being quoted by later philosphers. He is also credited with creating the first map of the world and the first sundial (although it did not track the time, only the seasons).\n\n Anaximander looks to have been a very inteligent astronomer, having ideas of the sun being a ball of fire and being bigger than the earth. He thought the moon was reflecting the sun\'s light and that the earth was a cylinder floating in space, with the flat top being the land and the bottom being water. ',
       image: 'images/Anaximander.png'
     },
     {
-      year: -530,
-      label: 'c. 530 BCE',
-      title: 'Pythagoras — The cult leader',
+      year: -570,
+      label: '570 BCE',
+      title: 'Pythagoras',
       summary: 'The famous leader of the Pythagorean cult.',
       detail: 'Pythagoras was a mainly private man, only known through the writings of his followers. Some of his more philosophical beliefs were that the soul is immortal and that reincarnation is real. Therefore, Pythagoras and his following were strict vegetarians, believing that eating meat would be eating the soul of another.\n\n Pythagoras is obviously most well known for his contributions to mathematics, said by some followers to be the first person to take arithmetic beyond normal commerce practices. Pythagoras made oaths to the triangular numbers, in particular having fondness for the number 10, in which he made a triangle of dots, with 4 of the bottom then 3, 2 and 1 to have 10 dots. The Pythagorean theorem however, was never truly credited to Pythagoras, being seen practiced by the Babylonians many years before. it is possible however that one of the Pythagorean followers discovered a proof.\n\n The Pythagorean cult is credited with much discovery over many different fields. They are thought to have understood how the length of string dictates the pitch it made when plucked, and they thought that planets followed this balance with different planets having different pitches. Pythagoras also hated the discovery of irrational numbers so much that upon discovery that the diagonal of a 1x1 square was irrational, he drowned the person who discovered it. Finally, the Pythagorean cult is thought to have considered earth to be spherical and the solar system to be heliocentric.',
       image: 'images/PythagoreanCult.png'
     },
     {
-      year: -400,
-      label: 'c. 400 BCE',
-      title: "Cantor — different sizes of infinity",
+      year: -540,
+      label: '540 BCE',
+      title: "Heraclitus",
       summary: 'Proving some infinities are strictly bigger than others.',
-      detail: "Georg Cantor showed that the real numbers cannot be counted off 1, 2, 3, ... the way the whole numbers can — there are, in a precise mathematical sense, more real numbers than whole numbers. Deeply controversial at the time; foundational to mathematics now.\n\nReplace this with your own research and sources."
+      detail: "Georg Cantor showed that the real numbers cannot be counted off 1, 2, 3, ... the way the whole numbers can — there are, in a precise mathematical sense, more real numbers than whole numbers. Deeply controversial at the time; foundational to mathematics now.\n\nReplace this with your own research and sources.",
+      image: 'images/Heraclitus.png'
     },
     {
-      year: -390,
-      label: 'c. 390 BCE',
-      title: "Gödel — incompleteness theorems",
+      year: -515,
+      label: '515 BCE',
+      title: "Parmenides",
       summary: 'Some true statements can never be proven, no matter the rulebook.',
-      detail: "Gödel proved that any sufficiently powerful, consistent mathematical system contains true statements that system can never prove. It ended a decades-long hope (Hilbert's program) of putting all of mathematics on one complete, self-verifying foundation.\n\nReplace this with your own research and sources."
+      detail: "Gödel proved that any sufficiently powerful, consistent mathematical system contains true statements that system can never prove. It ended a decades-long hope (Hilbert's program) of putting all of mathematics on one complete, self-verifying foundation.\n\nReplace this with your own research and sources.",
+      image: 'images/Parmenides.png'
+    },
+    {
+      year: -490,
+      label: '490 BCE',
+      title: "Zeno of Elea",
+      summary: 'Some true statements can never be proven, no matter the rulebook.',
+      detail: "Gödel proved that any sufficiently powerful, consistent mathematical system contains true statements that system can never prove. It ended a decades-long hope (Hilbert's program) of putting all of mathematics on one complete, self-verifying foundation.\n\nReplace this with your own research and sources.",
+      image: 'images/Zeno.png'
     }
   ];
 

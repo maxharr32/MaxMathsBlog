@@ -1,6 +1,6 @@
 ## The Presocratics
 
-the Presocratics were acredited with being the fathers of Philosophy, The first people to ask why. 
+the Presocratics were acredited with being the fathers of Philosophy, The first people to ask why. Below are a few of the biggest names from before the time of Socrates. 
 
 {{widget}}
 
