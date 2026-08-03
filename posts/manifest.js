@@ -86,9 +86,8 @@ window.POSTS = [
     slug: 'eulersformula',
     title: 'The Poster Boy Maths Equation - Euler\'s Formula',
     date: '3-08-2026',
-    summary: 'Explaining Euler\'s formula, and how it creates the most beautiful equation in mathematics -  \(e^{i\ pi} + 1 = 0\)',
+    summary: 'Explaining Euler\'s formula, and how it creates the most beautiful equation in mathematics.',
     tags: ['euler', 'imaginary', 'maths'],
-    widget: 'eulersformula'
   },
 ];
 

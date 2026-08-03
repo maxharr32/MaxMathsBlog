@@ -5,3 +5,4 @@
 - G.H Hardy and A mathematicians apology
 - Socrates, Plato and Aristotle summaries
 - Brownian Motion
+- Origin of e
