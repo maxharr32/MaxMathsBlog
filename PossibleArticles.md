@@ -1,7 +1,7 @@
 - Black Scholes model
-- Maths poster boy equation - diagram of the imaginary plane 
+- Maths poster boy equation - diagram of the imaginary plane, diagram of a unit circle and shows sin and cos changing as you move around the circle
 - Brownian Motion - possible showcase of bacteria moving
 - Russel and his mathematical pillars
 - G.H Hardy and A mathematicians apology
 - Socrates, Plato and Aristotle summaries
--
+- Brownian Motion

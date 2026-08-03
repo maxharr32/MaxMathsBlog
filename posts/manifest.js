@@ -56,7 +56,7 @@ window.POSTS = [
     title: 'How the Mandelbrot Fractal is Constructed',
     date: '25-07-2026',
     summary: 'Explaining the maths around the Mandelbrot fractal and how an iterative series is mapped to give the beautiful shapes seen.',
-    tags: ['iteration', 'infinity', 'fractal', 'maths'],
+    tags: ['iteration', 'imaginary', 'fractal', 'maths'],
     widget: 'mandelbrot'
   },
   {
@@ -81,6 +81,14 @@ window.POSTS = [
     summary: 'Exploring the ideas of the early Greek philosophers who laid the groundwork for Western thought, the names before Socrates, Plato and Aristotle.',
     tags: ['presocratics', 'history', 'philosophy'],
     widget: 'timelinepresoc'
+  },
+  {
+    slug: 'eulersformula',
+    title: 'The Poster Boy Maths Equation - Euler\'s Formula',
+    date: '3-08-2026',
+    summary: 'Explaining Euler\'s formula, and how it creates the most beautiful equation in mathematics -  \(e^{i\ pi} + 1 = 0\)',
+    tags: ['euler', 'imaginary', 'maths'],
+    widget: 'eulersformula'
   },
 ];
 

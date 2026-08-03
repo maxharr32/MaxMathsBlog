@@ -30,42 +30,66 @@
       document.getElementById('article').hidden = false;
     });
 
-  function renderBody(markdown, post) {
-    var hasWidget = /{{\s*widget\s*}}/.test(markdown);
-    var placeholder = '§WIDGET_DOCK§';
-    var html = marked.parse(markdown.replace(/{{\s*widget\s*}}/, placeholder));
-
+ function renderBody(markdown, post) {
+    // Supports two placeholder forms:
+    //   {{widget}}         — legacy, single widget, uses post.widget from the manifest
+    //   {{widget:name}}    — named, any number per post, e.g. {{widget:pi-estimation}}
+    // Mix and match freely; each placeholder becomes its own docked panel.
+    var slots = [];
+    var processed = markdown.replace(/{{\s*widget(?::([a-zA-Z0-9_-]+))?\s*}}/g, function (full, name) {
+      var widgetName = name || post.widget;
+      var token = '\u00A7WIDGET_DOCK_' + slots.length + '\u00A7';
+      slots.push({ widgetName: widgetName, mountId: 'widget-mount-' + slots.length });
+      return token;
+    });
+ 
+    var html = marked.parse(processed);
     var body = document.getElementById('article-body');
-
-    if (hasWidget && post.widget) {
+ 
+    slots.forEach(function (slot, i) {
+      if (!slot.widgetName) return;
+      var token = '\u00A7WIDGET_DOCK_' + i + '\u00A7';
       var dockHtml =
         '<div class="widget-dock">' +
-          '<div class="widget-dock-label">live &mdash; ' + post.widget + '</div>' +
-          '<div class="widget-dock-body" id="widget-mount"></div>' +
+          '<div class="widget-dock-label">live &mdash; ' + slot.widgetName + '</div>' +
+          '<div class="widget-dock-body" id="' + slot.mountId + '"></div>' +
         '</div>';
-      // marked wraps the placeholder text in a <p>; swap that whole
-      // paragraph out for the dock rather than leaving it nested inside one.
-      html = html.replace(new RegExp('<p>\\s*' + placeholder + '\\s*</p>'), dockHtml);
-      html = html.replace(placeholder, dockHtml); // fallback if not its own paragraph
-    }
-
+      html = html.replace(new RegExp('<p>\\s*' + token + '\\s*</p>'), dockHtml);
+      html = html.replace(token, dockHtml);
+    });
+ 
     body.innerHTML = html;
     document.getElementById('article').hidden = false;
-
-    if (hasWidget && post.widget) {
-      var script = document.createElement('script');
-      script.src = 'widgets/' + post.widget + '.js';
-      script.onload = function () {
-        var mount = document.getElementById('widget-mount');
-        if (mount && window.Widgets && window.Widgets[post.widget]) {
-          window.Widgets[post.widget].mount(mount);
+ 
+    var loadCallbacks = {};
+ 
+    slots.forEach(function (slot) {
+      if (!slot.widgetName) return;
+ 
+      function doMount() {
+        var mountEl = document.getElementById(slot.mountId);
+        if (mountEl && window.Widgets && window.Widgets[slot.widgetName]) {
+          window.Widgets[slot.widgetName].mount(mountEl);
         }
-      };
-      script.onerror = function () {
-        var mount = document.getElementById('widget-mount');
-        if (mount) mount.innerHTML = '<p><em>Widget script not found: widgets/' + post.widget + '.js</em></p>';
-      };
-      document.body.appendChild(script);
-    }
+      }
+ 
+      if (window.Widgets && window.Widgets[slot.widgetName]) {
+        doMount();
+      } else if (loadCallbacks[slot.widgetName]) {
+        loadCallbacks[slot.widgetName].push(doMount);
+      } else {
+        loadCallbacks[slot.widgetName] = [doMount];
+        var script = document.createElement('script');
+        script.src = 'widgets/' + slot.widgetName + '.js';
+        script.onload = function () {
+          loadCallbacks[slot.widgetName].forEach(function (fn) { fn(); });
+        };
+        script.onerror = function () {
+          var mountEl = document.getElementById(slot.mountId);
+          if (mountEl) mountEl.innerHTML = '<p><em>Widget script not found: widgets/' + slot.widgetName + '.js</em></p>';
+        };
+        document.body.appendChild(script);
+      }
+    });
   }
 })();
