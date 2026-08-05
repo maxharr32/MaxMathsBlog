@@ -8,6 +8,8 @@ Euler's formula is a way of displaying imaginary numbers in a clean and discrete
 
 You may wonder how e, the natural rate of growth, appears here and what relevance it has to imaginary numbers. And ultimately you may wonder how this all results in 'the most beautiful maths equation'
 
+![Image of a Julia Set](images/Eulerbanner.png)
+
 ## Taylor Series
 
 First we must recall the Taylor series of e, discussed in a previous article. This expansion is thus: 
@@ -42,4 +44,4 @@ This is called the most beautiful equation as it combines 5 very important const
 
 {{widget:euler-rotation}}
 
-![Image of a Julia Set](images/Eulerbanner.png)
+

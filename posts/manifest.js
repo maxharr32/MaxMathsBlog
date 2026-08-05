@@ -89,6 +89,13 @@ window.POSTS = [
     summary: 'Explaining Euler\'s formula, and how it creates the most beautiful equation in mathematics.',
     tags: ['euler', 'imaginary', 'maths'],
   },
+  {
+    slug: 'originofe',
+    title: 'The Origin of e - The natural growth rate',
+    date: '5-08-2026',
+    summary: 'Explaining the origin and the use of e in mathematics, and how an estimation of e is made.',
+    tags: ['euler', 'growth', 'economics', 'maths'],
+  },
 ];
 
 
