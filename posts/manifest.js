@@ -96,6 +96,13 @@ window.POSTS = [
     summary: 'Explaining the origin and the use of e in mathematics, and how an estimation of e is made.',
     tags: ['euler', 'growth', 'economics', 'maths'],
   },
+  {
+    slug: 'infinities',
+    title: 'Trying to get my head around infinities',
+    date: '12-08-2026',
+    summary: 'Explaining countable and uncountable infinities, examples of each, and the names associated with them.',
+    tags: ['infinities', 'cantor', 'maths'],
+  },
 ];
 
 

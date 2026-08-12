@@ -1,0 +1,15 @@
+## The idea
+
+The idea of there being 2 different types infinities is a mind boggling thought. How can something already so hard to comprehend have an added layer of complexity? These were the exact ideas of Cantor after discovering the countable and uncountable infinities, especially with him being a extremely religious Christian, breaking what he was told about God being the one and only infinite. 
+
+## Countable Infinities
+
+If my understanding is correct (I personally struggle to discern between countable and uncountable),  a countable infinity is one in which you could match its members to the natural numbers (1,2,3…), being able to list out 2 consequential members. An uncountable infinity is one with which this can not be done. The best example of which is the real numbers (numbers included on a standard number line). You could not list sequential members of the real numbers as you can not write down 2 numbers that sit directly next to each other in this set as there will always be a member that sits half way between them. <br>
+
+A countable infinity is most famously displayed in Hilbert's Hotel, a hotel with infinite rooms and infinite guests. When a new guest shows up, you can ask everyone to move one room down (the occupant in room 1 goes to room 2, 5 to 6). In doing this you can accommodate this new guest. But what about if Hilbert's bus showed up, a bus with infinite seats all filled with a guest. How can we add these two infinities to still have a countable infinity. The solution is simple, aske every member to double their room number and have then move to this new number (which will always be an even) and then fit every new guest into every odd numbered room. Due to the fact of there being infinitely many odd numbers, you will be able to accommodate these new guests. <br>
+
+This is also how we can show that combining any 2 countable infinities leads to another countable infinity (as the existing infinite guests and the bus of infinite guests added to create a new yet still countable infinite number of guests). This also violates one of the presupposed laws of maths, Euclid's law of parts, which states that the whole of anything is greater than any part. This seems so easily correct, but is proven not correct when applied to countable infinities as a countable infinity inside a countable infinity is the same size and therefore a part of something is the same size as the whole. (An easy way to think of this is to think of the size of the set of natural numbers and the size of the set of odd numbers, one encompasses the other but they are the same size).
+
+## Cantor's Breakdown
+
+After realising all this, Cantor - a devout Christian, was left confused as to how there could be different sizes of infinities, when god should be the one and only infinite. He spent the latter years of his life confused as to how this could be but said that he was convinced that his work honoured god.
