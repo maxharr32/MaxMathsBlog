@@ -98,10 +98,17 @@ window.POSTS = [
   },
   {
     slug: 'infinities',
-    title: 'Trying to get my head around infinities',
+    title: 'Trying to Get My Head Around Infinity',
     date: '12-08-2026',
     summary: 'Explaining countable and uncountable infinities, examples of each, and the names associated with them.',
-    tags: ['infinities', 'cantor', 'maths'],
+    tags: ['infinities', 'cantor', 'philosophy', 'maths'],
+  },
+  {
+    slug: 'phinormality',
+    title: 'The Modern Day Normality of Philosophy',
+    date: '14-08-2026',
+    summary: 'Using the standards of Greek Philosophers, we would all be philosophers today, so are we?',
+    tags: ['greek', 'history', 'philosophy'],
   },
 ];
 
