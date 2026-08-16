@@ -5,4 +5,6 @@
 - Socrates, Plato and Aristotle summaries
 - Brownian Motion
 - The normality of Philosophy nowadays
-- 
+- Is Maths a Core principle of the universe or a human creation
+- Last thursdayism and entropy
+- Summation of Russel's logic chapter

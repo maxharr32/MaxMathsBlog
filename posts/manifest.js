@@ -110,6 +110,13 @@ window.POSTS = [
     summary: 'Using the standards of Greek Philosophers, we would all be philosophers today, so are we?',
     tags: ['greek', 'history', 'philosophy'],
   },
+  {
+    slug: 'Liebnizlogic',
+    title: 'Would Perfect Logic Notation, cause World Peace?',
+    date: '16-08-2026',
+    summary: 'Leibniz thought that perfect notation for logic could lead to a world where disputes could be resolved through calculation.',
+    tags: ['leibniz', 'logic', 'philosophy'],
+  },
 ];
 
 
