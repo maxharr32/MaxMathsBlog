@@ -1,23 +1,3 @@
-/* manifest.js
- *
- * This is the entire "database" for the site: one array, one entry per
- * post. Add a new post by:
- *   1. Writing posts/<slug>.md
- *   2. (Optional) writing widgets/<widget-name>.js
- *   3. Adding one object below
- *
- * Fields:
- *   slug     — must match the .md filename (without extension)
- *   title    — shown on the homepage and the article page
- *   date     — "YYYY-MM-DD", used for sorting (newest first) and display
- *   summary  — one or two sentences, shown on the homepage
- *   tags     — array of short strings, purely descriptive
- *   widget   — optional. Must match the key registered in a widgets/*.js
- *              file via window.Widgets['<name>'] = { mount, unmount }.
- *              Leave undefined for a text-only post.
- *
- * See posts/_template.md and widgets/_template.js for starting points.
- */
 window.POSTS = [
   {
     slug: 'pi-estimation',
@@ -112,10 +92,17 @@ window.POSTS = [
   },
   {
     slug: 'Liebnizlogic',
-    title: 'Would Perfect Logic Notation, cause World Peace?',
+    title: 'Would Perfect Logic Notation lead to World Peace?',
     date: '16-08-2026',
     summary: 'Leibniz thought that perfect notation for logic could lead to a world where disputes could be resolved through calculation.',
     tags: ['leibniz', 'logic', 'philosophy'],
+  },
+  {
+    slug: 'IrrationalPy',
+    title: 'Could the Pythagoreans truly have Discovered Irrational Numbers?',
+    date: '18-08-2026',
+    summary: 'I previously claimed that the Pythagorean cult discovered, much to their dismay, irrational numbers. However, this may be incorrect.',
+    tags: ['greek', 'history', 'maths'],
   },
 ];
 
