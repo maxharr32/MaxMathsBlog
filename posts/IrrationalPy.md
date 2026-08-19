@@ -1,12 +1,17 @@
 ## The idea
 
+I recently stated that the Pythagorean cult discovered irrational numbers. However, upon watching a mini series on the Pythagorean cult, I was presented with a new argument that says that due to the core foundations of how the Greeks understood numbers, it would have been impossible for them to discover irrational numbers. 
 
+## The Argument made
 
-## What it shows
+This argument is based on the premise that Greeks understood numbers by comparing them. They understood ratios as numbers, only knowing how many sticks another stick is. My bed is 2.5 metre sticks long. This is the way they knew numbers and is the basis to the argument. This is displayed below.
 
+{{widget:commensurability}}
 
+The Pythagorean cult recognised that if a square had sides of 1, then its diagonal would be whatever the square root of 2 is. Another, yet different thing to note, is that there is no chance that they could have discovered the 'Pythagoras's theorem', there are many sculptures and evidence of the Babylonians discovering the theorem. Anyway, the Pythagoreans recognised that this diagonal was incommensurable to the other sides of the square, it wasn't a clean multiple. 
 
 ![Image of a Julia Set](images/Greeknumber.png)
 
-## Under the hood
+This was the problem they discovered, they did not discover irrational numbers, they discovered incommensurable numbers. 
+
 

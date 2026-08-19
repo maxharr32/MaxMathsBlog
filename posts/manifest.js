@@ -100,7 +100,7 @@ window.POSTS = [
   {
     slug: 'IrrationalPy',
     title: 'Could the Pythagoreans truly have Discovered Irrational Numbers?',
-    date: '18-08-2026',
+    date: '19-08-2026',
     summary: 'I previously claimed that the Pythagorean cult discovered, much to their dismay, irrational numbers. However, this may be incorrect.',
     tags: ['greek', 'history', 'maths'],
   },
