@@ -108,8 +108,8 @@ window.POSTS = [
     slug: 'distance',
     title: 'Fun Facts on Distance and Time',
     date: '25-08-2026',
-    summary: '2 quick facts that I find interesting about both distance and time here on earth.',
-    tags: ['earth', 'hiking', 'maths'],
+    summary: '2 quick facts that I find interesting about both our units of distance distance and how fast you\'d have to walk to beat the sun.',
+    tags: ['earth', 'walking', 'maths'],
   },
 ];
 
