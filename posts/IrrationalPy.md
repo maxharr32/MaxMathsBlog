@@ -14,4 +14,7 @@ The Pythagorean cult recognised that if a square had sides of 1, then its diagon
 
 This was the problem they discovered, they did not discover irrational numbers, they discovered incommensurable numbers. 
 
+## Another Interesting concept
+
+The Pythagoreans worshipped numbers, seeing different ones as symbols for different things. They thought as number 1 as unity itself and reason, calling it the perfect number and the origin number. Number 2 was the number of the woman and 3 the number of the man. 5 they supposed was the number for marriage, since 2 + 3 = 5, man plus woman = marriage. They further believed that all even numbers were female and all odd numbers male. They continued like this having many different symbolic number. The last one of note was 10 (like written in a past article) because it can be written as a triangular number and was the base for their counting. For these reasons they called it the number of perfection and the number of the cosmos.  
 

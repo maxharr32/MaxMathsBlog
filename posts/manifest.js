@@ -104,6 +104,13 @@ window.POSTS = [
     summary: 'I previously claimed that the Pythagorean cult discovered, much to their dismay, irrational numbers. However, this may be incorrect.',
     tags: ['greek', 'history', 'maths'],
   },
+  {
+    slug: 'distance',
+    title: 'Fun Facts on Distance and Time',
+    date: '25-08-2026',
+    summary: '2 quick facts that I find interesting about both distance and time here on earth.',
+    tags: ['earth', 'hiking', 'maths'],
+  },
 ];
 
 
