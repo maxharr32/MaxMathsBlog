@@ -111,6 +111,13 @@ window.POSTS = [
     summary: '2 quick facts that I find interesting about both our units of distance distance and how fast you\'d have to walk to beat the sun.',
     tags: ['earth', 'walking', 'maths'],
   },
+  {
+    slug: 'Gettier',
+    title: 'How do we know that someone knows anything? - Gettier cases:',
+    date: '24-10-2026',
+    summary: 'How does anyone know anything, could a lucky guess that happens to be true mean that a person knows something? could a justfied a reasoned guess be false?',
+    tags: ['knowledge', 'gettier', 'philosophy'],
+  },
 ];
 
 
