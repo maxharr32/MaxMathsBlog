@@ -118,6 +118,13 @@ window.POSTS = [
     summary: 'How does anyone know anything, could a lucky guess that happens to be true mean that a person knows something? could a justfied a reasoned guess be false?',
     tags: ['knowledge', 'gettier', 'philosophy'],
   },
+  {
+    slug: 'MathApology',
+    title: 'A Summation of A Mathematicians Apology',
+    date: '26-10-2026',
+    summary: 'A  defence of Mathematics (with apology not meaning the classical meaning, but the greek apologia) written by a Cambridge Professor during World War 2.',
+    tags: ['summary', 'maths'],
+  },
 ];
 
 
