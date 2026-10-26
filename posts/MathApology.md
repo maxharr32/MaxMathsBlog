@@ -2,6 +2,8 @@
 
 The core argument is that modern mathematics should be viewed as more of an aesthetic pursuit rather than a pursuit of function, Hardy likened it to that of poetry and sculpture. He also says, much like sculpture and poetry, that ugly mathematics has no place and that all mathematics should be beautiful. 
 
+![Hardy](images/HardyBanner.png)
+
 ## What Mathematics is “serious”:
 
 Hardy states that for mathematical work to be serious it needs generality, depth, unexpectedness, inevitability and economy. His examples of work that fits these criteria are Euclid’s proof of infinite primes and the proof of the irrationality of √2. He compares this to chess problems, which he states are merely trivial as they lack true significance to the wider world. He further says that the serious theorems will outlast cultural ideas, with Archimedes outlasting Aeschylus as ‘mathematical ideas do not decay’.
